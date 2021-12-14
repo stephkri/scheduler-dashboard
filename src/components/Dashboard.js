@@ -31,7 +31,9 @@ class Dashboard extends Component {
   state = { loading: true, focused: null };
 
   render() {
-    const dashboardClasses = classnames("dashboard");
+    const dashboardClasses = classnames("dashboard", {
+      "dashboard--focused": this.state.focused
+     });
 
     if (this.state.loading) {
       return <Loading />;
