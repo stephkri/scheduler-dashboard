@@ -28,7 +28,7 @@ const data = [
 ];
 
 class Dashboard extends Component {
-  state = { loading: true };
+  state = { loading: true, focused: null };
 
   render() {
     const dashboardClasses = classnames("dashboard");
@@ -45,8 +45,6 @@ class Dashboard extends Component {
         value={panel.value}
       />
     ));
-
-
 
     return <main className={dashboardClasses}>{panels}</main>;
   }
