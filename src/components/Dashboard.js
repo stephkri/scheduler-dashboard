@@ -6,7 +6,8 @@ import {
   getLeastPopularTimeSlot,
   getMostPopularDay,
   getInterviewsPerDay
- } from "helpers/selectors";
+} from "helpers/selectors";
+import { setInterview } from "helpers/reducers";
 
 import classnames from "classnames";
 import axios from "axios";
