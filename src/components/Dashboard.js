@@ -30,11 +30,21 @@ const data = [
 class Dashboard extends Component {
   state = { loading: false, focused: null };
 
+  componentDidMount() {
+    const focused = JSON.parse(localStorage.getItem("focused"));
+
+    if (focused) {
+      this.setState({ focused });
+    }
+  }
+
+  /*
   selectPanel(id) {
     this.setState(prev => ({
      focused: prev.focused ? null : id
     }));
   }
+  */
 
   render() {
     const dashboardClasses = classnames("dashboard", {
